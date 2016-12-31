@@ -194,3 +194,8 @@ AMPページを試しに作ってみた
     layout="responsive">
   </amp-instagram>
 ```
+
+###google-analytics
+```
+ <amp-pixel src="https://ssl.google-analytics.com/collect?v=1&amp;tid=UA-56791268-1&amp;t=pageview&amp;cid=$RANDOM&amp;z=$RANDOM"></amp-pixel>
+```
