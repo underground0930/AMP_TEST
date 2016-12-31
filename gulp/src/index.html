@@ -45,7 +45,9 @@
         <section class="section">
             <h2 class="sectionTitle">動画</h2>
             <p class="img">
-                <amp-video src="./assets/movie/video.mp4" poster="" width="800" height="450" layout="responsive">
+                <amp-video controls poster="" width="800" height="450" layout="responsive">
+                    <source type="video/mp4" src="./assets/movie/video.mp4">
+                    <source type="video/webm" src="./assets/movie/video.webm">
                     <p fallback>ブラウザが動画の再生に対応していません。</p>
                 </amp-video>
             </p>
