@@ -94,7 +94,6 @@ layout="responsive"でアスペクト比を保ったままレスポンシブ対�
 
 
 ###テキストと画像
-画像はpタグで囲う。
 
 ```
 <p>グイグイ来ております。</p>
@@ -305,7 +304,7 @@ http://hoge.jp/aaa/amp.html#development=1
 
 
 ## reference website
-- <a href="https://www.ampproject.org/docs/get_started/create" target="_blank">Create Your First AMP Page</a>
+- <a href="https://www.ampproject.org/ja/docs/get_started/create" target="_blank">Create Your First AMP Page</a>
 - <a href="http://kaiinui.hatenablog.com/entry/2015/10/10/211636" target="_blank">Google の AMP に対応した HTML を書く</a>
 - <a href="https://webkikaku.co.jp/blog/seo/accelerated-mobile-pages/" target="_blank">いよいよ導入されるAMP（Accelerated Mobile Pages）の基礎知識から対応方法まで！まとめ</a>
 - <a href="https://syncer.jp/amp" target="_blank">AMPの対応方法まとめ (作成途中)</a>
