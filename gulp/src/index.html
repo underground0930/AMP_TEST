@@ -38,79 +38,171 @@
             <h2 class="sectionTitle">テキストと画像</h2>
             <p>グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。グイグイ来ております。</p>
             <p class="img">
-                <amp-img src="./assets/img/img1.png" width="200" height="200" alt="Sample Photo" layout="responsive">
-                </amp-img>
+              <amp-img
+               src="./assets/img/img1.png"
+               width="200"
+               height="200"
+               alt="Sample Photo"
+               layout="responsive">
+              </amp-img>
             </p>
         </section>
         <section class="section">
             <h2 class="sectionTitle">動画</h2>
             <p class="img">
-                <amp-video controls poster="" width="800" height="450" layout="responsive">
-                    <source type="video/mp4" src="./assets/movie/video.mp4">
-                    <source type="video/webm" src="./assets/movie/video.webm">
-                </amp-video>
+             <amp-video
+              controls
+              poster=""
+              width="800"
+              height="450"
+              layout="responsive">
+                <source type="video/mp4" src="./assets/movie/video.mp4">
+                <source type="video/webm" src="./assets/movie/video.webm">
+            </amp-video>
             </p>
         </section>
         <section class="section">
             <h2 class="sectionTitle">カルーセル</h2>
-            <amp-carousel class="carouselClass" width="300" height="300" controls>
-                <amp-img src="./assets/img/img1.png" width="300" height="300"></amp-img>
-                <amp-img src="./assets/img/img2.png" width="300" height="300"></amp-img>
-                <amp-img src="./assets/img/img3.png" width="300" height="300"></amp-img>
-            </amp-carousel>
-            <amp-carousel class="carouselClass" type="slides" width="300" height="300" loop autoplay controls>
-                <amp-img src="./assets/img/img1.png" width="300" height="300"></amp-img>
-                <amp-img src="./assets/img/img2.png" width="300" height="300"></amp-img>
-                <amp-img src="./assets/img/img3.png" width="300" height="300"></amp-img>
-            </amp-carousel>
-            <amp-carousel class="carouselClass" type="slides" width="300" height="300" loop autoplay controls>
-                <amp-youtube data-videoid="WVuM7SuxCSA" width="400" height="225">
+
+          <amp-carousel
+              class="carouselClass"
+              width="300"
+              height="300"
+              controls>
+              <amp-img
+                src="./assets/img/img1.png"
+                width="300"
+                height="300">
+              </amp-img>
+              <amp-img
+                src="./assets/img/img2.png"
+                width="300"
+                height="300">
+              </amp-img>
+              <amp-img
+                src="./assets/img/img3.png"
+                width="300"
+                height="300">
+              </amp-img>
+          </amp-carousel>
+
+          <amp-carousel
+              class="carouselClass"
+              type="slides"
+              width="300"
+              height="300"
+              loop
+              autoplay
+              controls>
+              <amp-img
+                src="./assets/img/img1.png"
+                width="300"
+                height="300">
+              </amp-img>
+              <amp-img
+                src="./assets/img/img2.png"
+                width="300"
+                height="300">
+              </amp-img>
+              <amp-img
+                src="./assets/img/img3.png"
+                width="300"
+                height="300">
+              </amp-img>
+          </amp-carousel>
+
+          <amp-carousel
+              class="carouselClass"
+              type="slides"
+              width="300"
+              height="300"
+              loop
+              autoplay
+              controls>
+                <amp-youtube
+                data-videoid="WVuM7SuxCSA"
+                width="400"
+                height="225">
                 </amp-youtube>
-                <amp-youtube data-videoid="vfSV9I2OeNU" width="400" height="225">
+                <amp-youtube
+                data-videoid="vfSV9I2OeNU"
+                width="400"
+                height="225">
                 </amp-youtube>
-                <amp-youtube data-videoid="QBnYf6T0EIk" width="400" height="225">
-                </amp-youtube>
-            </amp-carousel>
+                <amp-youtube
+                data-videoid="QBnYf6T0EIk"
+                width="400"
+                height="225">
+              </amp-youtube>
+          </amp-carousel>
         </section>
         <section class="section">
             <h2 class="sectionTitle">lightbox</h2>
             <button on="tap:box1">開く1</button>
             <amp-lightbox id="box1" layout="nodisplay">
-                <p>ライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックス</p>
-                <p>ライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックス</p>
-                <p>ライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックス</p>
-                <p>ライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックス</p>
-                <p>ライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックスライトボックス</p>
+                <p>ライトボックスライトボックスライト</p>
+                <p>ライトボックスライトボックスライト</p>
                 <p>
-                    <button on="tap:box1.close" role="button" tabindex="0">閉じる1</button>
+                    <button
+                      on="tap:box1.close"
+                      role="button"
+                      tabindex>閉じる1</button>
                 </p>
             </amp-lightbox>
             <button on="tap:box2">開く2</button>
             <amp-lightbox id="box2" layout="nodisplay">
-                <amp-img src="./assets/img/img1.png" width="300" height="200" layout="fill" on="tap:box2.close" role="button" tabindex="1">
+                <amp-img
+                  src="./assets/img/img1.png"
+                  width="300"
+                  height="200"
+                  layout="fill"
+                  on="tap:box2.close"
+                  role="button"
+                  tabindex>
                 </amp-img>
             </amp-lightbox>
         </section>
         <section class="section">
             <h2 class="sectionTitle">Facebook</h2>
-            <amp-facebook width="400" height="300" layout="responsive" data-href="https://www.facebook.com/spotlightmedia.jp/posts/1091222427655775">
+            <amp-facebook
+              width="400"
+              height="300"
+              layout="responsive"
+              data-href="https://www.facebook.com/spotlightmedia.jp/posts/1091222427655775">
             </amp-facebook>
-            <amp-facebook width="400" height="300" layout="responsive" data-embed-as="video" data-href="https://www.facebook.com/AmazonJP/videos/1312481438824480/">
+            <amp-facebook
+              width="400"
+              height="300"
+              layout="responsive"
+              data-embed-as="video"
+              data-href="https://www.facebook.com/AmazonJP/videos/1312481438824480/">
             </amp-facebook>
         </section>
         <section class="section">
             <h2 class="sectionTitle">Twitter</h2>
-            <amp-twitter data-tweetid="814838838786830337" width="800" height="600" layout="responsive">
+            <amp-twitter
+              data-tweetid="814838838786830337"
+              width="800"
+              height="600"
+              layout="responsive">
             </amp-twitter>
         </section>
         <section class="section">
             <h2 class="sectionTitle">Youtube</h2>
-            <amp-youtube data-videoid="ubUswMi_5Sw" width="800" height="450" layout="responsive">
+            <amp-youtube
+              data-videoid="ubUswMi_5Sw"
+              width="800"
+              height="450"
+              layout="responsive">
             </amp-youtube>
         </section>
         <section class="section">
             <h2 class="sectionTitle">instagram</h2>
-            <amp-instagram data-shortcode="5GTCSQtghH" width="500" height="500" layout="responsive">
+            <amp-instagram
+              data-shortcode="5GTCSQtghH"
+              width="500"
+              height="500"
+              layout="responsive">
             </amp-instagram>
         </section>
     </main>
