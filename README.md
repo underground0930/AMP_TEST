@@ -11,7 +11,7 @@ googleのプロジェクトAccelerated Mobile Pages （AMP）で<br>
 制約がかなり多く、使えるタグも厳しく制限されています。<br>
 
 - javascriptが禁止、googleが用意したライブラリで機能を実装していく。
-- cssの外部読み込み禁止。inline-styleも禁止。googleで用意されたタグ内にcssをベタ描き。容量は50KB以内
+- cssの外部読み込み禁止。inline-styleも禁止。googleで用意されたタグ内にcssをベタ描き。容量は50KB以内 !important禁止
 - googleFontは外部読み込みOK
 - img、video、iframe、formタグ… その他、多くのタグが使用禁止。
 - amp-boilerplateを読み込まないとエラー
