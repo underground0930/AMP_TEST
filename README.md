@@ -9,11 +9,14 @@ googleのプロジェクトAccelerated Mobile Pages （AMP）で<br>
 モバイルサイトを爆速に作れる、というシロモノ。<br>
 <br>
 制約がかなり多く、使えるタグも厳しく制限されています。<br>
-まず、javascriptが使えません。なのでgoogleが用意したライブラリを駆使していくしかありません。
-<br>
-cssの外部読み込みも禁止です。htmlにベタ書きするしかありません。<br>
-<br>
-imgタグ、videoタグ、iframeタグ…その他、多くのタグが使用禁止。その他多くの制約もあり。<br>
+
+- javascriptが禁止、googleが用意したライブラリで機能を実装していく。
+- cssの外部読み込み禁止。inline-styleも禁止。googleで用意されたタグ内にcssをベタ描き。容量は50KB以内
+- googleFontは外部読み込みOK
+- img、video、iframe、formタグ… その他、多くのタグが使用禁止。
+- amp-boilerplateを読み込まないとエラー
+- schema.orgを設定する必要がある
+
 <br>
 例えば<a href="https://hyper-text.org/archives/2016/01/get_started_accelerated_mobile_pages.shtml" target="_blank">WWW WATCHさんの記事</a>によると<br>
 <br>
