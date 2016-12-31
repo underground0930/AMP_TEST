@@ -1,7 +1,35 @@
 # AMP_TEST
-AMPページを試しに作ってみた
+
+##概要
+AMPページを試しに作ってみました。<br>
+本当は通常ページと対にして作るのが良いのですが、今回は割愛。<br>
+このデモはすべての要素ではなく一部のみ作成してあります。<br>
+<br>
+googleのプロジェクトAccelerated Mobile Pages （AMP）で<br>
+モバイルサイトを爆速に作れる、というシロモノ。<br>
+<br>
+制約がかなり多く、使えるタグも厳しく制限されています。<br>
+まず、javascriptが使えません。なのでgoogleが用意したライブラリを駆使していくしかありません。
+<br>
+cssの外部読み込みも禁止です。htmlにベタ書きするしかありません。<br>
+<br>
+imgタグ、videoタグ、iframeタグ…その他、多くのタグが使用禁止。その他多くの制約もあり。<br>
+<br>
+例えば<a href="https://hyper-text.org/archives/2016/01/get_started_accelerated_mobile_pages.shtml" target="_blank">WWW WATCHさんの記事</a>によると<br>
+<br>
+>（Click-To-Play iframe を除いて） amp-iframe は ViewPort の上端から一定距離以上、下に離れた場所にしか表示できない。一定距離って言うのは、600px、もしくは ViewPort の縦サイズの 75% （例えば ViewPort の縦サイズが 667px だった場合、約 500px） に該当する数値のいずれか小さい方。<br>
+>なので、ViewPort の縦サイズが 667px の iPhone 6 の場合、amp-iframe 要素の出現位置が、Web ページの最上部から 500px 以上離れていないと駄目ってことになります。
+
+<br>
+これはかなり厳しいですね。おそらくギミックがふんだんに使われているサイトには向かないでしょう。
+<br>
+細かい仕様などは<a href="https://syncer.jp/amp" target="_blank">syncerさん</a>によくまとまってます。<br>
+これらのタグは使わずにgoogleから与えられたカスタムタグを使用してサイトを作っていくことになります。
+<br>
+<br>
 
 ## Demo
+※スマフォでみてください。<br>
 <a href="https://underground0930.github.io/AMP_TEST/" target="_blank">demo</a>
 
 ## Usage
@@ -269,6 +297,12 @@ bodyタグ内のどこかにはっつける。1pxの画像になってそれが�
  <amp-pixel src="https://ssl.google-analytics.com/collect?v=1&amp;tid=UA-000000000-1&amp;t=pageview&amp;cid=$RANDOM&amp;dt=$TITLE&amp;dl=$CANONICAL_URL&amp;z=$RANDOM"></amp-pixel>
 ```
 
+## 検証
+```
+http://hoge.jp/aaa/amp.html#development=1
+```
+のようにパラメータをつけると、コンソールにエラーや注意が表示される
+
 
 ## reference website
 - <a href="https://www.ampproject.org/docs/get_started/create" target="_blank">Create Your First AMP Page</a>
@@ -276,9 +310,5 @@ bodyタグ内のどこかにはっつける。1pxの画像になってそれが�
 - <a href="https://webkikaku.co.jp/blog/seo/accelerated-mobile-pages/" target="_blank">いよいよ導入されるAMP（Accelerated Mobile Pages）の基礎知識から対応方法まで！まとめ</a>
 - <a href="https://syncer.jp/amp" target="_blank">AMPの対応方法まとめ (作成途中)</a>
 - <a href="https://hyper-text.org/archives/2016/01/get_started_accelerated_mobile_pages.shtml" target="_blank">AMP （Accelerated Mobile Pages） HTML を出力するようにしてみたけど面倒くさかった話</a>
-
-<br><br><br>
-
-
 
 
