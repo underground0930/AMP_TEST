@@ -4,8 +4,69 @@ AMPページを試しに作ってみた
 ## Demo
 <a href="https://underground0930.github.io/AMP_TEST/" target="_blank">demo</a>
 
+## Usage
+
+###共通
+widthとheightは必ず指定しなくてはいけない。<br>
+layout="responsive"でアスペクト比を保ったままレスポンシブ対応を勝手にしてくれる。
+
+
+
+###準備
+
+```
+<!doctype html><!-- 決まり文句 -->
+<html amp lang="ja"><!-- 決まり文句 -->
+<head><!-- 決まり文句 -->
+    <meta charset="utf-8"><!-- 決まり文句 -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script><!-- これは必須で読み込む -->
+
+    <!-- これは要素によって必要なものを都度読み込む -->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+
+    <title>AMP DEMO</title>
+
+    <!-- link 要素は rel="canonical" のみ。通常ページを指定、ampページしかなければ自身のURL -->
+    <link rel="canonical" href="https://underground0930.github.io/AMP_TEST/" />
+
+    <!-- 決まり文句 -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <!-- JSON-LD で構造化データを記述 -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Review",
+        "headline": "AMPのデモです",
+        "datePublished": "2016-12-31T00:00:00Z",
+        "image": [
+            "./assets/img/logo.png"
+        ]
+    }
+    </script>
+
+    <!-- これは決まり文句 -->
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <!-- ここにページで使うCSSを記述　インラインで書いていいのは１つだけ 外部読み込み禁止 -->
+    <style amp-custom>body{height:100%}#main{padding:30px 20px 0;margin:0 auto;max-width:600px}.text{margin:0 0 30px}.mainTitle{text-align:center;font-size:20px;margin:0 0 30px}.sectionTitle{border-left:4px solid #c00;border-bottom:1px solid #eee;padding:0 0 5px 10px;font-size:14px}.videoClass{margin:0 auto 30px;display:block}.img{text-align:center;margin:0 0 30px}.carouselClass{display:block;margin:0 auto 30px}
+</style>
+</head>
+<body>
+</body>
+</html>
+```
+
+
+
 
 ###テキストと画像
+画像はpタグで囲う。
 
 ```
 <p>グイグイ来ております。</p>
@@ -22,6 +83,7 @@ AMPページを試しに作ってみた
 ```
 
 ###動画
+複数の形式を設定できる。動画を呼び出すプロトコルはhttpsじゃないとダメ。
 
 ```
 <p>
@@ -38,6 +100,8 @@ AMPページを試しに作ってみた
 ```
 
 ###カルーセル
+オプションでカルーセルか、スライドか選べる。youtubeとかも挿入できる。
+左右のボタンはCSSでカスタマイズ可能。
 
 ```
 <!-- カルーセル -->
@@ -117,7 +181,7 @@ AMPページを試しに作ってみた
 ```
 
 ###lightbox
-
+on: で指定したidのイベントを登録できる。
 ```
 <!-- lightbox　テキスト -->
 <button on="tap:box1">開く1</button>
@@ -149,6 +213,7 @@ AMPページを試しに作ってみた
 
 
 ###facebook
+urlを指定する。動画もできる。
 ```
 <amp-facebook
   width="400"
@@ -166,6 +231,7 @@ AMPページを試しに作ってみた
 ```
 
 ###Twitter
+idを指定する。
 ```
  <amp-twitter
     data-tweetid="814838838786830337"
@@ -176,6 +242,7 @@ AMPページを試しに作ってみた
 ```
 
 ###Youtube
+idを指定する。
 ```
 <amp-youtube
   data-videoid="ubUswMi_5Sw"
@@ -186,6 +253,7 @@ AMPページを試しに作ってみた
 ```
 
 ###instagram
+idを指定する。
 ```
  <amp-instagram
     data-shortcode="5GTCSQtghH"
@@ -196,6 +264,21 @@ AMPページを試しに作ってみた
 ```
 
 ###google-analytics
+bodyタグ内のどこかにはっつける。1pxの画像になってそれがトラッキングしてくれる（jsが使えないため）
 ```
- <amp-pixel src="https://ssl.google-analytics.com/collect?v=1&amp;tid=UA-56791268-1&amp;t=pageview&amp;cid=$RANDOM&amp;dt=$TITLE&amp;dl=$CANONICAL_URL&amp;z=$RANDOM"></amp-pixel>
+ <amp-pixel src="https://ssl.google-analytics.com/collect?v=1&amp;tid=UA-000000000-1&amp;t=pageview&amp;cid=$RANDOM&amp;dt=$TITLE&amp;dl=$CANONICAL_URL&amp;z=$RANDOM"></amp-pixel>
 ```
+
+
+## reference website
+- <a href="https://www.ampproject.org/docs/get_started/create" target="_blank">Create Your First AMP Page</a>
+- <a href="http://kaiinui.hatenablog.com/entry/2015/10/10/211636" target="_blank">Google の AMP に対応した HTML を書く</a>
+- <a href="https://webkikaku.co.jp/blog/seo/accelerated-mobile-pages/" target="_blank">いよいよ導入されるAMP（Accelerated Mobile Pages）の基礎知識から対応方法まで！まとめ</a>
+- <a href="https://syncer.jp/amp" target="_blank">AMPの対応方法まとめ (作成途中)</a>
+- <a href="https://hyper-text.org/archives/2016/01/get_started_accelerated_mobile_pages.shtml" target="_blank">AMP （Accelerated Mobile Pages） HTML を出力するようにしてみたけど面倒くさかった話</a>
+
+<br><br><br>
+
+
+
+
