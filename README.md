@@ -197,5 +197,5 @@ AMPページを試しに作ってみた
 
 ###google-analytics
 ```
- <amp-pixel src="https://ssl.google-analytics.com/collect?v=1&amp;tid=UA-56791268-1&amp;t=pageview&amp;cid=$RANDOM&amp;z=$RANDOM"></amp-pixel>
+ <amp-pixel src="https://ssl.google-analytics.com/collect?v=1&amp;tid=UA-56791268-1&amp;t=pageview&amp;cid=$RANDOM&amp;dt=$TITLE&amp;dl=$CANONICAL_URL&amp;z=$RANDOM"></amp-pixel>
 ```
